@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Confidencial: La Audiencia Invisible | Gramática Superior</title>
+    
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#1e1b4b',
+                            950: '#0f172a'
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gradient-bg {
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 70%);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-interactive {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-interactive:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.2);
+        }
+        .pulse-glow {
+            animation: pulse-glow 3s infinite alternate;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(99, 102, 241, 0.2); }
+            100% { box-shadow: 0 0 35px rgba(99, 102, 241, 0.5); }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.6);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-slate-100 min-h-screen font-sans antialiased custom-scrollbar selection:bg-indigo-500 selection:text-white">
+
+    <!-- Top Bar Navigation -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-filter blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="h-9 w-9 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold text-indigo-400 tracking-wider uppercase block">Licenciatura en Comunicaciones</span>
+                    <span class="text-sm font-bold text-slate-200">Cátedra: Gramática Superior</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+                    Modo Anonimato Activo
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10">
+
+        <!-- Hero Title Section -->
+        <section class="text-center space-y-4">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-xs text-slate-300 mb-2">
+                <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Foro Diagnóstico & Experimentación Lingüística</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-indigo-300">
+                Experimento: "La Audiencia Invisible"
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
+                Espacio de respuesta totalmente anónima. Ni tu docente ni tus compañeros sabrán quién escribió cada comentario.
+            </p>
+        </section>
+
+        <!-- Confidentiality Guarantee Banner -->
+        <section class="glass-card rounded-2xl p-4 sm:p-6 border-l-4 border-l-amber-500 bg-slate-900/60">
+            <div class="flex items-start space-x-4">
+                <div class="p-2 rounded-xl bg-amber-500/10 text-amber-400 flex-shrink-0 mt-0.5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-base font-bold text-amber-300">Garantía Absoluta de Confidencialidad</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        El sistema <strong class="text-white">no guarda tu nombre, correo ni IP</strong>. Tu respuesta se almacena de forma neutral. Expresa tu opinión real con total sinceridad profesional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Context Box / Scenario Trigger -->
+        <section class="glass-card rounded-2xl p-6 sm:p-8 space-y-6 relative overflow-hidden pulse-glow">
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="space-y-3">
+                <span class="text-xs font-mono font-bold text-indigo-400 tracking-wider uppercase">Planteamiento del Caso</span>
+                <h2 class="text-xl sm:text-2xl font-bold text-white">
+                    Escenario: La percepción pública del error
+                </h2>
+            </div>
+
+            <div class="bg-slate-950/80 rounded-xl p-5 border border-slate-800 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p>
+                    Imaginas que estás viendo televisión, escuchando una radio, leyendo un medio digital o revisando las redes sociales de una institución relevante. Estás consumiendo contenido como <strong class="text-indigo-300">un usuario/audiencia común</strong> (las personas a tu alrededor no saben que estudias Comunicaciones ni conocen tu formación).
+                </p>
+                <p class="text-slate-200 bg-indigo-950/40 p-4 rounded-lg border-l-2 border-indigo-500 font-medium">
+                    De pronto, el presentador, locutor o redactor comete <strong class="text-amber-400">errores gramaticales o vicios del lenguaje evidentes</strong> (como <em>"hubieron muchos problemas"</em>, <em>"imprimido"</em>, <em>"sal para afuera"</em>, <em>"nadien"</em>, dequeísmos o faltas ortográficas graves).
+                </p>
+            </div>
+
+            <div class="space-y-2 pt-2">
+                <h3 class="text-lg font-extrabold text-white flex items-center space-x-2">
+                    <span class="text-indigo-400">❓</span>
+                    <span>Pregunta de Discusión:</span>
+                </h3>
+                <p class="text-slate-300 text-base sm:text-lg font-medium italic pl-4 border-l-2 border-indigo-500">
+                    Como público espectador... ¿Qué piensas honestamente sobre ese comunicador o medio? ¿Qué juicio o percepción genera en ti respecto a su credibilidad, capacidad y profesionalismo?
+                </p>
+            </div>
+        </section>
+
+        <!-- Response Form / Single Submission Logic -->
+        <section id="form-container" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-indigo-600/30 text-indigo-400 flex items-center justify-center font-bold text-sm">1</div>
+                    <h3 class="text-lg font-bold text-white">Emite tu respuesta anónima</h3>
+                </div>
+                <span class="text-xs text-slate-400 font-mono">Restricción: 1 sola respuesta</span>
+            </div>
+
+            <form id="forum-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                <div>
+                    <label for="media-context" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                        1. Selecciona el medio donde más te molesta escuchar/leer estos errores:
+                    </label>
+                    <select id="media-context" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors">
+                        <option value="" disabled selected>-- Selecciona un medio/canal --</option>
+                        <option value="Noticiero de TV / Televisión">Noticiero de TV / Televisión</option>
+                        <option value="Emisora de Radio / Podcast">Emisora de Radio / Podcast</option>
+                        <option value="Periódico / Prensa Digital">Periódico / Prensa Digital</option>
+                        <option value="Redes Sociales Oficiales">Redes Sociales Oficiales de Marcas o Instituciones</option>
+                        <option value="Discurso Político / Conferencia">Discurso Político / Conferencia</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="user-opinion" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                        2. Tu opinión sincera y detallada como audiencia:
+                    </label>
+                    <textarea 
+                        id="user-opinion" 
+                        rows="4" 
+                        required 
+                        minlength="25"
+                        placeholder="Ejemplo: Honestamente me genera bastante desconfianza. Siento que si no cuida la forma en que habla o escribe, tampoco verifica la información que está dando..."
+                        class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-slate-200 text-sm placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors custom-scrollbar"
+                    ></textarea>
+                    <p class="text-xs text-slate-500 mt-1 flex justify-between">
+                        <span>Sé directo y sincero. Este dato es 100% irreastreable.</span>
+                        <span id="char-count" class="font-mono">0 caracteres</span>
+                    </p>
+                </div>
+
+                <div class="pt-2">
+                    <button 
+                        type="submit" 
+                        id="submit-btn"
+                        class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center space-x-2"
+                    >
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                        <span>Publicar Respuesta Anónimamente</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Success Message Placeholder (Shown after submission) -->
+        <section id="already-submitted-notice" class="hidden glass-card rounded-2xl p-6 border-l-4 border-l-emerald-500 bg-emerald-950/20 text-emerald-300">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">✓</div>
+                <div>
+                    <h4 class="font-bold text-white">¡Respuesta registrada exitosamente!</h4>
+                    <p class="text-xs text-emerald-300/80">Has completado tu participación confidencial en este foro. Tu comentario ya se muestra anónimamente en el muro público.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post-Submission Feedback: "El Espejo del Comunicador" -->
+        <section id="feedback-section" class="hidden glass-card rounded-2xl p-6 sm:p-8 space-y-6 border border-indigo-500/30 bg-gradient-to-b from-indigo-950/40 to-slate-900/90 transition-all">
+            <div class="flex items-center space-x-3 text-amber-400 font-semibold text-xs tracking-wider uppercase">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                <span>Reflexión Pedagógica Clave</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                🪞 El Espejo del Comunicador
+            </h2>
+
+            <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p class="text-slate-200 font-medium">
+                    Observa detenidamente lo que acabas de responder y lo que han escrito tus compañeros en el muro. Fuiste severo, analítico y crítico con el emisor que cometió el vicio del lenguaje.
+                </p>
+                
+                <div class="bg-indigo-900/30 border border-indigo-500/30 rounded-xl p-5 text-indigo-100 font-medium text-base space-y-2">
+                    <p class="text-amber-300 font-bold text-lg">💡 La gran lección de Gramática Superior:</p>
+                    <p>
+                        <em>«Esa misma severidad, esa pérdida de credibilidad y ese juicio crítico con el que evaluaste al emisor de tu ejemplo... es exactamente el mismo juicio que la audiencia aplicará sobre ti mañana como Licenciado en Comunicaciones si no aprendes a dominar, pulir y respetar tu lenguaje oral y escrito.»</em>
+                    </p>
+                </div>
+
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    En nuestra profesión, la palabra es nuestra herramienta de trabajo y nuestra principal carta de presentación. Un solo vicio del lenguaje puede destruir años de reputación profesional en segundos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Live Wall of Anonymous Responses -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white flex items-center space-x-2">
+                        <span>💬 Muro de Respuestas Anónimas</span>
+                        <span id="response-count" class="text-xs bg-indigo-600/30 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full font-mono">0</span>
+                    </h3>
+                    <p class="text-xs text-slate-400">Respuestas confidenciales enviadas por los estudiantes de la materia</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex items-center space-x-2">
+                    <select id="filter-media" onchange="filterResponses()" class="bg-slate-900 border border-slate-700 rounded-lg text-xs px-3 py-2 text-slate-300 focus:outline-none focus:border-indigo-500">
+                        <option value="ALL">Todos los medios</option>
+                        <option value="Noticiero de TV / Televisión">Televisión</option>
+                        <option value="Emisora de Radio / Podcast">Radio / Podcast</option>
+                        <option value="Periódico / Prensa Digital">Prensa Digital</option>
+                        <option value="Redes Sociales Oficiales">Redes Sociales</option>
+                        <option value="Discurso Político / Conferencia">Discursos</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Wall Grid -->
+            <div id="wall-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Dynamic and Preloaded cards will render here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-8 mt-16 text-center text-xs text-slate-400">
+        <div class="max-w-4xl mx-auto px-4 space-y-2">
+            <p class="font-medium text-slate-300">Licenciatura en Comunicaciones • Cátedra: Gramática Superior</p>
+            <p>Plataforma para dinámicas de aula y reflexión crítica del discurso.</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Initial Mock Answers to populate the wall
+        const initialMockData = [
+            {
+                id: 'mock-1',
+                media: 'Noticiero de TV / Televisión',
+                text: 'Sinceramente me da pena ajena. Si un presentador de noticias dice "hubieron personas", inmediatamente siento que no se preparó, le resta categoría al canal y dudo si investigó bien lo que está reportando.',
+                date: 'Hace 10 min',
+                badge: 'Agente de Comunicaciones #104'
+            },
+            {
+                id: 'mock-2',
+                media: 'Redes Sociales Oficiales',
+                text: 'En una marca o institución, ver un post oficial con faltas de ortografía o pleonasmos me transmite total falta de profesionalismo. Da la impresión de que contrataron a cualquiera para llevar las redes sin supervisión.',
+                date: 'Hace 25 min',
+                badge: 'Agente de Comunicaciones #219'
+            },
+            {
+                id: 'mock-3',
+                media: 'Emisora de Radio / Podcast',
+                text: 'Me desespera el uso excesivo de muletillas como "este...", "o sea", "verdad". Como oyente me distrae muchísimo del tema principal y siento que el locutor está improvisando por falta de vocabulario.',
+                date: 'Hace 40 min',
+                badge: 'Agente de Comunicaciones #088'
+            },
+            {
+                id: 'mock-4',
+                media: 'Discurso Político / Conferencia',
+                text: 'Cuando escucho a alguien con un cargo importante usar dequeísmos ("pienso de que"), pierde autoridad inmediatamente ante mis ojos. Siento que intenta sonar técnico o elegante pero termina demostrando ignorancia.',
+                date: 'Hace 1 hora',
+                badge: 'Agente de Comunicaciones #312'
+            }
+        ];
+
+        // Global State
+        let allResponses = [];
+
+        // DOM Load Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            setupCharCounter();
+            loadResponses();
+            checkSubmissionStatus();
+        });
+
+        // Character counter logic
+        function setupCharCounter() {
+            const textarea = document.getElementById('user-opinion');
+            const charCount = document.getElementById('char-count');
+            textarea.addEventListener('input', () => {
+                charCount.textContent = `${textarea.value.length} caracteres`;
+            });
+        }
+
+        // Check if user has already submitted on this device
+        function checkSubmissionStatus() {
+            const hasSubmitted = localStorage.getItem('forum_submitted_vicios');
+            if (hasSubmitted) {
+                disableFormView();
+                showFeedbackSection(false);
+            }
+        }
+
+        // Handle Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const media = document.getElementById('media-context').value;
+            const opinion = document.getElementById('user-opinion').value.trim();
+
+            if (!media || opinion.length < 25) {
+                alert('Por favor selecciona un medio y escribe una opinión argumentada (mínimo 25 caracteres).');
+                return;
+            }
+
+            // Create new anonymous entry
+            const newResponse = {
+                id: 'user-' + Date.now(),
+                media: media,
+                text: opinion,
+                date: 'Justo ahora',
+                badge: 'Tu Respuesta Confidencial',
+                isUser: true
+            };
+
+            // Save to LocalStorage
+            let storedUserResponses = JSON.parse(localStorage.getItem('user_forum_responses') || '[]');
+            storedUserResponses.unshift(newResponse);
+            localStorage.setItem('user_forum_responses', JSON.stringify(storedUserResponses));
+            localStorage.setItem('forum_submitted_vicios', 'true');
+
+            // Update UI
+            disableFormView();
+            showFeedbackSection(true);
+            loadResponses();
+
+            // Trigger celebration confetti
+            if (window.confetti) {
+                confetti({
+                    particleCount: 80,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+        }
+
+        // Disable form once submitted
+        function disableFormView() {
+            const formContainer = document.getElementById('form-container');
+            const notice = document.getElementById('already-submitted-notice');
+            
+            formContainer.classList.add('hidden');
+            notice.classList.remove('hidden');
+        }
+
+        // Show Reflection Section
+        function showFeedbackSection(animate) {
+            const feedbackSec = document.getElementById('feedback-section');
+            feedbackSec.classList.remove('hidden');
+            if (animate) {
+                feedbackSec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Load & Combine Responses
+        function loadResponses() {
+            const userResponses = JSON.parse(localStorage.getItem('user_forum_responses') || '[]');
+            allResponses = [...userResponses, ...initialMockData];
+            renderResponses(allResponses);
+        }
+
+        // Filter responses by media
+        function filterResponses() {
+            const filterVal = document.getElementById('filter-media').value;
+            if (filterVal === 'ALL') {
+                renderResponses(allResponses);
+            } else {
+                const filtered = allResponses.filter(r => r.media === filterVal);
+                renderResponses(filtered);
+            }
+        }
+
+        // Render Cards in Wall
+        function renderResponses(data) {
+            const grid = document.getElementById('wall-grid');
+            const countEl = document.getElementById('response-count');
+            
+            grid.innerHTML = '';
+            countEl.textContent = data.length;
+
+            if (data.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-500 text-sm">
+                        No hay opiniones registradas para este medio aún.
+                    </div>
+                `;
+                return;
+            }
+
+            data.forEach(item => {
+                const isUser = item.isUser;
+                const card = document.createElement('div');
+                
+                card.className = `glass-card glass-card-interactive p-5 rounded-xl space-y-3 flex flex-col justify-between ${
+                    isUser ? 'border-2 border-indigo-500/80 bg-indigo-950/20' : ''
+                }`;
+
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold ${
+                                isUser ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-indigo-300 border border-slate-700'
+                            }">
+                                ${item.badge}
+                            </span>
+                            <span class="text-xs text-slate-500 font-mono">${item.date}</span>
+                        </div>
+
+                        <div class="text-xs font-semibold text-amber-400/90 flex items-center space-x-1">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"></path>
+                            </svg>
+                            <span>Canal: ${item.media}</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed italic">
+                            "${escapeHtml(item.text)}"
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500">
+                        <span class="flex items-center space-x-1">
+                            <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Percepción pública analizada</span>
+                        </span>
+                        <span class="font-mono text-emerald-400">Anonimizado ✓</span>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // Helper to prevent HTML injection
+        function escapeHtml(str) {
+            return str
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
