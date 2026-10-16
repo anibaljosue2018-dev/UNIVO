@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 1: El Giro Pragmático y la Lingüística del Texto</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .font-mono-code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .slide-transition {
+            transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+        }
+        .accordion-content.expanded {
+            max-height: 2000px;
+            transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+    <!-- Encabezado de la Presentación (Canvas Friendly Header) -->
+    <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-30 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-indigo-600 to-violet-500 text-white p-2.5 rounded-xl shadow-lg shadow-indigo-500/20 flex items-center justify-center">
+                    <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-indigo-400">Lingüística del Texto • Sesión 1</span>
+                    <h1 class="text-base sm:text-lg font-bold text-slate-100 leading-tight">El Giro Pragmático: Del Modelo Oracional al Texto</h1>
+                </div>
+            </div>
+            
+            <!-- Barra de Progreso y Navegación Rápida -->
+            <div class="flex items-center space-x-3 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/60">
+                <div class="text-xs font-medium text-slate-300">
+                    Momento <span id="current-slide-num" class="text-indigo-400 font-bold">1</span> de 4
+                </div>
+                <div class="w-24 bg-slate-700 h-2 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="bg-indigo-500 h-full w-1/4 transition-all duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal de Láminas -->
+    <main class="flex-grow max-w-6xl w-full mx-auto p-3 sm:p-6 md:p-8 flex items-center justify-center">
+        
+        <!-- ================= MOMENTO 1: NACIMIENTO DE LA LINGÜÍSTICA DEL TEXTO ================= -->
+        <div id="slide-1" class="slide w-full glass-card rounded-2xl shadow-2xl overflow-hidden slide-transition">
+            <!-- Header de Lámina -->
+            <div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-slate-950 p-6 sm:p-8 border-b border-slate-800">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-500/30">
+                        <i class="fa-solid fa-clock-rotate-left mr-1.5"></i> Momento 1: Evolución Epistemológica
+                    </span>
+                    <span class="text-slate-400 text-xs"><i class="fa-solid fa-calendar mr-1"></i> Años 1960 - 1970</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">1. Nacimiento de la Lingüística del Texto</h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed max-w-4xl">
+                    Transición teórica fundamental desde las gramáticas intraoracionales abstractas hacia el estudio del discurso situado en situaciones reales de comunicación.
+                </p>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-8">
+                <!-- Diagrama SVG: Comparación Paradigmática -->
+                <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-diagram-project text-indigo-400"></i> Ruptura del Paradigma Gramatical
+                    </h3>
+                    <div class="w-full overflow-x-auto">
+                        <svg viewBox="0 0 800 240" class="w-full h-auto min-w-[650px]" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Estructuralismo / Generativismo -->
+                            <rect x="20" y="20" width="340" height="200" rx="12" fill="#1e1b4b" stroke="#4338ca" stroke-width="2" />
+                            <text x="190" y="50" text-anchor="middle" fill="#a5b4fc" font-weight="bold" font-size="15">Paradigma Tradicional (Saussure / Chomsky)</text>
+                            
+                            <rect x="40" y="70" width="300" height="40" rx="6" fill="#312e81" />
+                            <text x="190" y="95" text-anchor="middle" fill="#e0e7ff" font-size="12">Unidad Máxima: La Oración Aislar [S + V + C]</text>
+                            
+                            <rect x="40" y="125" width="300" height="75" rx="6" fill="#1e1b4b" stroke="#3730a3" stroke-width="1" stroke-dasharray="4" />
+                            <text x="190" y="150" text-anchor="middle" fill="#94a3b8" font-size="11">❌ Excluye el contexto comunicativo</text>
+                            <text x="190" y="168" text-anchor="middle" fill="#94a3b8" font-size="11">❌ Incapaz de explicar la anáfora global</text>
+                            <text x="190" y="186" text-anchor="middle" fill="#94a3b8" font-size="11">❌ Análisis sintáctico descontextualizado</text>
+
+                            <!-- Flecha de Transición -->
+                            <path d="M 370 120 L 420 120" stroke="#818cf8" stroke-width="3" marker-end="url(#arrow)" />
+                            <defs>
+                                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#818cf8" />
+                                </marker>
+                            </defs>
+
+                            <!-- Lingüística del Texto -->
+                            <rect x="440" y="20" width="340" height="200" rx="12" fill="#064e3b" stroke="#059669" stroke-width="2" />
+                            <text x="610" y="50" text-anchor="middle" fill="#6ee7b7" font-weight="bold" font-size="15">Lingüística del Texto (Van Dijk, Schmidt)</text>
+                            
+                            <rect x="460" y="70" width="300" height="40" rx="6" fill="#047857" />
+                            <text x="610" y="95" text-anchor="middle" fill="#ecfdf5" font-size="12">Unidad Fundamental: El Texto / Discurso Situado</text>
+                            
+                            <rect x="460" y="125" width="300" height="75" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1" stroke-dasharray="4" />
+                            <text x="610" y="150" text-anchor="middle" fill="#a7f3d0" font-size="11">✓ Integra intención y pragmática social</text>
+                            <text x="610" y="168" text-anchor="middle" fill="#a7f3d0" font-size="11">✓ Explica coherencia y progresión temática</text>
+                            <text x="610" y="186" text-anchor="middle" fill="#a7f3d0" font-size="11">✓ Acontecimiento comunicativo dinámico</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Marco Teórico Extendido -->
+                <div class="prose prose-invert max-w-none text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        El surgimiento de la <strong>Lingüística del Texto</strong> a finales de los años 60 representa un cambio de paradigma insustituible. Los modelos gramaticales clásicos postulaban que una vez explicada la estructura de la oración sintáctica, el análisis lingüístico alcanzaba su límite. Sin embargo, investigadores como <strong>Teun van Dijk, Robert-Alain de Beaugrande, Wolfgang U. Dressler y Siegfried J. Schmidt</strong> demostraron que la comunicación humana real no se produce mediante frases aisladas, sino mediante unidades discursivas complejas.
+                    </p>
+                    <p>
+                        Phenomena como el uso de pronombres anafóricos (ej. <em>"El presidente dio un discurso. Él afirmó..."</em>), la continuidad temático-argumentativa o la cohesión a través de conectores oracionales requieren necesariamente examinar la totalidad del texto y el entorno pragmático en el que se emite.
+                    </p>
+                </div>
+
+                <!-- Botones Desplegables / Acordeones de Profundización -->
+                <div class="space-y-4">
+                    <!-- Acordeón 1.1 -->
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-1-1')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-indigo-500/20 text-indigo-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-book-bookmark"></i></span>
+                                Fundamentación Teórica: Por qué falló el enfoque oracional
+                            </span>
+                            <i id="icon-acc-1-1" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-1-1" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <p>El modelo generativo-transformacional de Noam Chomsky definía la competencia lingüística como la capacidad del hablante ideal para reconocer oraciones gramaticalmente bien formadas. Sin embargo, este enfoque omitió tres factores cruciales:</p>
+                                <ul class="list-disc pl-5 space-y-1.5 text-slate-400">
+                                    "><strong class="text-slate-200">Dependencia referencial:</strong> El valor de verdad y la referencia de un pronombre o demostrativo no se resuelve dentro de la oración sola.</li>
+                                    "><strong class="text-slate-200">Macroestructura semántica:</strong> El sentido global de un documento no es la suma sintáctica de sus partes, sino un plan de significado jerárquico.</li>
+                                    "><strong class="text-slate-200">Intencionalidad comunicativa:</strong> La intención del emisor modula la estructura verbal según la situación interaccional.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Acordeón 1.2 -->
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-1-2')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-amber-500/20 text-amber-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-newspaper"></i></span>
+                                Ejemplo Aplicado: Alerta Periodística o Tuit Ultima Hora
+                            </span>
+                            <i id="icon-acc-1-2" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-1-2" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <div class="bg-amber-950/30 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                                    <p class="font-semibold text-amber-300 mb-1">Caso de Análisis: Banner de "ÚLTIMA HORA"</p>
+                                    <p class="italic text-slate-300 mb-2">"Aprobado el presupuesto. Tras una sesión de 14 horas, la medida sale adelante sin el apoyo de la oposición."</p>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        <strong class="text-amber-400">Análisis Textual:</strong> La segunda frase carece de sujeto explícito ("la medida"). Un análisis oracional aislado calificaría la frase de incompleta o ambigua. Sin embargo, en el nivel del <strong>texto</strong>, la anáfora "la medida" se conecta de inmediato con "el presupuesto". La comprensión exige la integración pragmática del contexto periodístico.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= MOMENTO 2: DEFINICIÓN PROCESUAL E INTENCIONAL DEL TEXTO ================= -->
+        <div id="slide-2" class="slide hidden w-full glass-card rounded-2xl shadow-2xl overflow-hidden slide-transition">
+            <!-- Header de Lámina -->
+            <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-slate-950 p-6 sm:p-8 border-b border-slate-800">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">
+                        <i class="fa-solid fa-cubes mr-1.5"></i> Momento 2: Naturaleza del Texto
+                    </span>
+                    <span class="text-slate-400 text-xs"><i class="fa-solid fa-gears mr-1"></i> Acontecimiento Comunicativo</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">2. Definición Procesual e Intencional del Texto</h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed max-w-4xl">
+                    El texto concebido no como un objeto lingüístico estático, sino como una acción verbal compleja (communicative occurrence) dotada de cierre semántico e intencionalidad.
+                </p>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-8">
+                <!-- Ecuaciones Teóricas en Formato Código/Fórmula -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-rose-950/40 border border-rose-800/60 p-4 rounded-xl">
+                        <div class="text-xs font-bold text-rose-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-xmark mr-1"></i> Concepción Lineal Errónea</div>
+                        <div class="font-mono-code text-rose-200 text-sm bg-rose-950/80 p-3 rounded-lg border border-rose-900">
+                            [Oración A] + [Oración B] + [Oración C] ≠ TEXTO
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">La mera concatenación de frases gramaticalmente correctas no genera automáticamente sentido discursivo ni validez comunicativa.</p>
+                    </div>
+
+                    <div class="bg-emerald-950/40 border border-emerald-800/60 p-4 rounded-xl">
+                        <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-check mr-1"></i> Modelo Funcional del Texto</div>
+                        <div class="font-mono-code text-emerald-200 text-xs sm:text-sm bg-emerald-950/80 p-3 rounded-lg border border-emerald-900">
+                            Unidad Intencional + Coherencia Semántica + Adecuación Contextual = TEXTO
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">El texto se configura cuando existe un propósito definido, una estructura lógica profunda y adaptación a la situación.</p>
+                    </div>
+                </div>
+
+                <!-- Infografía SVG: Red Holística del Texto -->
+                <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-network-wired text-emerald-400"></i> El Texto como Ecosistema Holístico
+                    </h3>
+                    <div class="w-full overflow-x-auto">
+                        <svg viewBox="0 0 700 220" class="w-full h-auto min-w-[550px]" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Nodo Central: TEXTO -->
+                            <circle cx="350" cy="110" r="45" fill="#047857" stroke="#34d399" stroke-width="3" />
+                            <text x="350" y="115" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">TEXTO</text>
+
+                            <!-- Nodo 1: Cierre Semántico -->
+                            <circle cx="150" cy="60" r="35" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+                            <text x="150" y="65" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="semibold">Cierre Semántico</text>
+                            <line x1="182" y1="72" x2="308" y2="98" stroke="#10b981" stroke-width="2" stroke-dasharray="3" />
+
+                            <!-- Nodo 2: Articulación Intencional -->
+                            <circle cx="550" cy="60" r="35" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+                            <text x="550" y="65" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="semibold">Intencionalidad</text>
+                            <line x1="518" y1="72" x2="392" y2="98" stroke="#10b981" stroke-width="2" stroke-dasharray="3" />
+
+                            <!-- Nodo 3: Coherencia Integral -->
+                            <circle cx="180" cy="170" r="35" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+                            <text x="180" y="175" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="semibold">Coherencia Global</text>
+                            <line x1="212" y1="158" x2="310" y2="125" stroke="#10b981" stroke-width="2" stroke-dasharray="3" />
+
+                            <!-- Nodo 4: Situacionalidad Pragmática -->
+                            <circle cx="520" cy="170" r="35" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+                            <text x="520" y="175" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="semibold">Situacionalidad</text>
+                            <line x1="488" y1="158" x2="390" y2="125" stroke="#10b981" stroke-width="2" stroke-dasharray="3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Botones Desplegables de Profundización -->
+                <div class="space-y-4">
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-2-1')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-emerald-500/20 text-emerald-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-microscope"></i></span>
+                                Definición de Schmidt e Isenberg: El Acontecimieto Comunicativo
+                            </span>
+                            <i id="icon-acc-2-1" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-2-1" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <p>Siegfried J. Schmidt define el texto como una <em>acción verbal manifestada procesualmente</em>. No es un manuscrito inerte, sino la realización de un plan intencional en un momento socio-histórico específico.</p>
+                                <p>Un texto requiere <strong>cierre semántico</strong>: la cualidad de constituir un universo de sentido completo que satisface la necesidad informativa para la cual fue concebido.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-2-2')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-amber-500/20 text-amber-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-pen-nib"></i></span>
+                                Ejemplo Comparativo: Párrafo Desarticulado vs. Párrafo Articulado
+                            </span>
+                            <i id="icon-acc-2-2" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-2-2" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm space-y-4 bg-slate-950/40">
+                                <div class="bg-rose-950/20 border-l-4 border-rose-500 p-3 rounded-r">
+                                    <p class="font-bold text-rose-400 text-xs uppercase mb-1">❌ Párrafo Desarticulado (Incoherencia Funcional)</p>
+                                    <p class="text-slate-300 text-xs italic">"La inflación subió al 5%. Los supermercados venden alimentos. El ministro viaja mañana a Madrid. Las tasas de interés son fijadas por el Banco Central."</p>
+                                    <p class="text-xs text-slate-400 mt-2"><em>Problema:</em> Son oraciones correctas en lo sintáctico, pero no componen un texto. Falta intencionalidad unificada y relación lógica entre ellas.</p>
+                                </div>
+
+                                <div class="bg-emerald-950/20 border-l-4 border-emerald-500 p-3 rounded-r">
+                                    <p class="font-bold text-emerald-400 text-xs uppercase mb-1">✔️ Párrafo Articulado (Texto Pleno Periodístico)</p>
+                                    <p class="text-slate-300 text-xs italic">"El incremento de la inflación al 5% ha encendido las alarmas en el sector retail. Frente a este panorama, el ministro de Economía viajará a Madrid para negociar un rescate financiero, mientras el Banco Central evalúa elevar las tasas de interés."</p>
+                                    <p class="text-xs text-slate-400 mt-2"><em>Virtud:</em> Existe hilo conductor semántico, jerarquía temática y un propósito comunicativo claro para el lector.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= MOMENTO 3: PROCESAMIENTO PSICOLINGÜÍSTICO Y COGNITIVO ================= -->
+        <div id="slide-3" class="slide hidden w-full glass-card rounded-2xl shadow-2xl overflow-hidden slide-transition">
+            <!-- Header de Lámina -->
+            <div class="bg-gradient-to-r from-cyan-950 via-slate-900 to-slate-950 p-6 sm:p-8 border-b border-slate-800">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full border border-cyan-500/30">
+                        <i class="fa-solid fa-brain mr-1.5"></i> Momento 3: Dimensión Cognitiva
+                    </span>
+                    <span class="text-slate-400 text-xs"><i class="fa-solid fa-microchip mr-1"></i> Procesamiento de Información</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">3. Procesamiento Psicolingüístico y Cognitivo</h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed max-w-4xl">
+                    Cómo interactúan los esquemas previos, los modelos de situación y los conocimientos enciclopédicos compartidos durante la lectura y producción discursiva.
+                </p>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-8">
+                <!-- Flujo del Procesamiento Cognitivo SVG -->
+                <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-split-up-and-left text-cyan-400"></i> Modelo Cognitivo de Van Dijk & Kintsch
+                    </h3>
+                    <div class="w-full overflow-x-auto">
+                        <svg viewBox="0 0 750 180" class="w-full h-auto min-w-[600px]" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Paso 1 -->
+                            <rect x="20" y="40" width="150" height="90" rx="10" fill="#083344" stroke="#06b6d4" stroke-width="2"/>
+                            <text x="95" y="75" text-anchor="middle" fill="#a5f3fc" font-weight="bold" font-size="12">1. Entrada Textual</text>
+                            <text x="95" y="95" text-anchor="middle" fill="#67e8f9" font-size="10">Procesamiento de</text>
+                            <text x="95" y="110" text-anchor="middle" fill="#67e8f9" font-size="10">Superficie Léxica</text>
+
+                            <path d="M 170 85 L 205 85" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow-cyan)" />
+
+                            <!-- Paso 2 -->
+                            <rect x="210" y="40" width="150" height="90" rx="10" fill="#083344" stroke="#06b6d4" stroke-width="2"/>
+                            <text x="285" y="75" text-anchor="middle" fill="#a5f3fc" font-weight="bold" font-size="12">2. Esquemas Previos</text>
+                            <text x="285" y="95" text-anchor="middle" fill="#67e8f9" font-size="10">Activación de Marcos</text>
+                            <text x="285" y="110" text-anchor="middle" fill="#67e8f9" font-size="10">y Scripts Mentales</text>
+
+                            <path d="M 360 85 L 395 85" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow-cyan)" />
+
+                            <!-- Paso 3 -->
+                            <rect x="400" y="40" width="150" height="90" rx="10" fill="#083344" stroke="#06b6d4" stroke-width="2"/>
+                            <text x="475" y="75" text-anchor="middle" fill="#a5f3fc" font-weight="bold" font-size="12">3. Modelo de Situación</text>
+                            <text x="475" y="95" text-anchor="middle" fill="#67e8f9" font-size="10">Representación Mental</text>
+                            <text x="475" y="110" text-anchor="middle" fill="#67e8f9" font-size="10">del Escenario Real</text>
+
+                            <path d="M 550 85 L 585 85" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow-cyan)" />
+
+                            <!-- Paso 4 -->
+                            <rect x="590" y="40" width="140" height="90" rx="10" fill="#155e75" stroke="#22d3ee" stroke-width="2"/>
+                            <text x="660" y="75" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="12">4. Sentido Pleno</text>
+                            <text x="660" y="95" text-anchor="middle" fill="#cffaffe6" font-size="10">Integración e</text>
+                            <text x="660" y="110" text-anchor="middle" fill="#cffaffe6" font-size="10">Inferencia Pragmática</text>
+
+                            <defs>
+                                <marker id="arrow-cyan" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#0891b2" />
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-3">
+                    <p>
+                        Desde la perspectiva psicolingüística, los interlocutores <strong>no son receptores pasivos</strong> que decodifican caracteres. Durante la lectura, el sujeto reconstruye el mensaje integrando la información explícita del texto con su conocimiento del mundo (conocimiento enciclopédico).
+                    </p>
+                    <p>
+                        Los <strong>modelos de situación</strong> son las representaciones mentales que los oyentes o lectores forman en su memoria episódica acerca de los sucesos, personas o situaciones de las que habla el discurso.
+                    </p>
+                </div>
+
+                <!-- Acordeones interactivos -->
+                <div class="space-y-4">
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-3-1')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-cyan-500/20 text-cyan-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-lightbulb"></i></span>
+                                El Rol de la Inferencia y los Vacíos Informativos
+                            </span>
+                            <i id="icon-acc-3-1" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-3-1" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <p>Ningún texto es totalmente explícito; de serlo, resultaría insoportablemente redundante. La economía del lenguaje opera porque el emisor confía en que el receptor completará los vacíos informativos mediante <strong>inferencias cognitivas</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-3-2')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-amber-500/20 text-amber-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-building-flag"></i></span>
+                                Ejemplo Aplicado: Comunicado Institucional de Crisis
+                            </span>
+                            <i id="icon-acc-3-2" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-3-2" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <div class="bg-amber-950/30 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                                    <p class="font-semibold text-amber-300 mb-1">Caso: Rueda de Prensa Gubernamental</p>
+                                    <p class="italic text-slate-300 text-xs mb-2">"Lamentamos las interrupciones en la red de suministro eléctrico de esta madrugada. Los equipos técnicos están desplegados en la zona cero."</p>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        <strong class="text-amber-400">Análisis Cognitivo:</strong> El lector activa de inmediato el esquema previo de "apagón" o "falla de infraestructura". Aunque la nota no menciona la palabra "apagón", el modelo de situación construido en la mente del usuario llena los huecos semánticos instantáneamente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= MOMENTO 4: APLICACIÓN A LAS CIENCIAS DE LA COMUNICACIÓN ================= -->
+        <div id="slide-4" class="slide hidden w-full glass-card rounded-2xl shadow-2xl overflow-hidden slide-transition">
+            <!-- Header de Lámina -->
+            <div class="bg-gradient-to-r from-violet-950 via-slate-900 to-slate-950 p-6 sm:p-8 border-b border-slate-800">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="bg-violet-500/20 text-violet-300 text-xs font-semibold px-3 py-1 rounded-full border border-violet-500/30">
+                        <i class="fa-solid fa-bullhorn mr-1.5"></i> Momento 4: Práctica Profesional
+                    </span>
+                    <span class="text-slate-400 text-xs"><i class="fa-solid fa-sliders mr-1"></i> Negociación del Sentido</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">4. Aplicación Práctica en Ciencias de la Comunicación</h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed max-w-4xl">
+                    El sentido de un mensaje no es una propiedad fija e inmutable, sino el resultado dinámico de una negociación pragmática entre el emisor, el soporte mediático y la audiencia.
+                </p>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-8">
+                <!-- Ecosistema del Discurso Mediático SVG -->
+                <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-satellite-dish text-violet-400"></i> Negociación del Sentido en el Ecosistema Digital
+                    </h3>
+                    <div class="w-full overflow-x-auto">
+                        <svg viewBox="0 0 750 200" class="w-full h-auto min-w-[600px]" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Emisor / Periodista -->
+                            <rect x="20" y="60" width="140" height="80" rx="12" fill="#2e1065" stroke="#7c3aed" stroke-width="2"/>
+                            <text x="90" y="95" text-anchor="middle" fill="#ddd6fe" font-bold font-size="12">Emisor / Medio</text>
+                            <text x="90" y="115" text-anchor="middle" fill="#a78bfa" font-size="10">Intención / Marco</text>
+
+                            <!-- Conexión 1 -->
+                            <path d="M 160 100 L 220 100" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow-violet)" />
+
+                            <!-- Medio / Canal Técnico -->
+                            <rect x="225" y="45" width="170" height="110" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" stroke-dasharray="4"/>
+                            <text x="310" y="80" text-anchor="middle" fill="#c7d2fe" font-bold font-size="12">Soporte y Código</text>
+                            <text x="310" y="100" text-anchor="middle" fill="#818cf8" font-size="10">• Prensa / Redes / TV</text>
+                            <text x="310" y="115" text-anchor="middle" fill="#818cf8" font-size="10">• Algoritmo / Formato</text>
+                            <text x="310" y="130" text-anchor="middle" fill="#818cf8" font-size="10">• Límites del Soporte</text>
+
+                            <!-- Conexión 2 -->
+                            <path d="M 395 100 L 455 100" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow-violet)" />
+
+                            <!-- Receptor / Audiencia -->
+                            <rect x="460" y="60" width="150" height="80" rx="12" fill="#2e1065" stroke="#7c3aed" stroke-width="2"/>
+                            <text x="535" y="95" text-anchor="middle" fill="#ddd6fe" font-bold font-size="12">Receptor / Público</text>
+                            <text x="535" y="115" text-anchor="middle" fill="#a78bfa" font-size="10">Interpretación / Uso</text>
+
+                            <!-- Resultado: Sentido -->
+                            <circle cx="685" cy="100" r="38" fill="#4c1d95" stroke="#a78bfa" stroke-width="2"/>
+                            <text x="685" y="98" text-anchor="middle" fill="#ffffff" font-bold font-size="11">SENTIDO</text>
+                            <text x="685" y="112" text-anchor="middle" fill="#ddd6fe" font-size="9">NEGOCIADO</text>
+
+                            <path d="M 610 100 L 645 100" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-violet)"/>
+
+                            <defs>
+                                <marker id="arrow-violet" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b5cf6" />
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Matriz Comparativa de Soportes Mediáticos -->
+                <div class="bg-slate-900/60 rounded-xl p-4 border border-slate-800">
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Matriz de Adecuación Discursiva por Soporte</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+                            <thead class="bg-slate-800/80 text-slate-200">
+                                <tr>
+                                    <th class="p-2.5">Soporte Mediático</th>
+                                    <th class="p-2.5">Restricción de Formato</th>
+                                    <th class="p-2.5">Estrategia Textual Requerida</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/40">
+                                    <td class="p-2.5 font-semibold text-indigo-400"><i class="fa-brands fa-x-twitter mr-1"></i> Redes / Push Note</td>
+                                    <td class="p-2.5">Límite de caracteres, lectura veloz</td>
+                                    <td class="p-2.5">Alta densidad informativa, focalización en el Rema central</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40">
+                                    <td class="p-2.5 font-semibold text-emerald-400"><i class="fa-solid fa-newspaper mr-1"></i> Prensa Escrita / Reportaje</td>
+                                    <td class="p-2.5">Espacio amplio, lectura analítica</td>
+                                    <td class="p-2.5">Desarrollo de progresión temática lineal y derivada, referencias explícitas</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40">
+                                    <td class="p-2.5 font-semibold text-purple-400"><i class="fa-solid fa-tower-cell mr-1"></i> Radio / Podcast</td>
+                                    <td class="p-2.5">Canal auditivo, temporalidad efímera</td>
+                                    <td class="p-2.5">Cohesión mediante recurrencias léxicas simples, sintaxis directa, oraciones cortas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Acordeones de Profundización -->
+                <div class="space-y-4">
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-4-1')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-violet-500/20 text-violet-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-user-check"></i></span>
+                                La Responsabilidad Ética y Práctica del Redactor
+                            </span>
+                            <i id="icon-acc-4-1" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-4-1" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <p>Comprender que el significado no es inmutable obliga al comunicador a prever los marcos de interpretación de su audiencia. Un titular descuidado puede suscitar lecturas sesgadas o generar desinformación aunque cada oracion individual sea rigurosamente cierta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-900/60">
+                        <button onclick="toggleAccordion('acc-4-2')" class="w-full flex justify-between items-center p-4 text-left font-semibold text-slate-200 hover:bg-slate-800/50 transition">
+                            <span class="flex items-center gap-3">
+                                <span class="bg-amber-500/20 text-amber-400 p-2 rounded-lg text-xs"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                                Ejemplo Aplicado: Notificación Push para Móviles
+                            </span>
+                            <i id="icon-acc-4-2" class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div id="acc-4-2" class="accordion-content">
+                            <div class="p-4 sm:p-6 border-t border-slate-800/80 text-sm text-slate-300 space-y-3 bg-slate-950/40">
+                                <div class="bg-amber-950/30 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                                    <p class="font-semibold text-amber-300 mb-1">Caso: Redacción de Notificación en App Noticiosa</p>
+                                    <p class="italic text-slate-300 text-xs mb-2">"🚨 Urgente: La Cumbre del Clima cierra sin acuerdo sobre emisiones tras veto imprevisto."</p>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        <strong class="text-amber-400">Análisis Técnico:</strong> El periodista condensa la macroestructura de una noticia de 1,000 palabras en 85 caracteres. La efectividad depende de activar el marco pragmático de "urgencia", seleccionar un conector léxico preciso ("tras") y anticipar la reacción del usuario móvil.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Barra Inferior de Navegación Interactiva -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-4 px-4 sm:px-8 sticky bottom-0 z-30">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <button id="prev-btn" onclick="changeSlide(-1)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition border border-slate-700 disabled:opacity-30 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-chevron-left"></i> <span class="hidden sm:inline">Anterior</span>
+            </button>
+
+            <!-- Puntos Navegadores -->
+            <div class="flex items-center space-x-2">
+                <button onclick="goToSlide(1)" title="Momento 1" class="dot-btn w-3 h-3 rounded-full bg-indigo-500 transition-all duration-300"></button>
+                <button onclick="goToSlide(2)" title="Momento 2" class="dot-btn w-3 h-3 rounded-full bg-slate-700 transition-all duration-300"></button>
+                <button onclick="goToSlide(3)" title="Momento 3" class="dot-btn w-3 h-3 rounded-full bg-slate-700 transition-all duration-300"></button>
+                <button onclick="goToSlide(4)" title="Momento 4" class="dot-btn w-3 h-3 rounded-full bg-slate-700 transition-all duration-300"></button>
+            </div>
+
+            <button id="next-btn" onclick="changeSlide(1)" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition disabled:opacity-30 disabled:cursor-not-allowed">
+                <span class="hidden sm:inline">Siguiente</span> <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Script de Lógica Interactiva -->
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 4;
+
+        function updateSlideView() {
+            // Ocultar y mostrar láminas
+            for (let i = 1; i <= totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                if (i === currentSlide) {
+                    slide.classList.remove('hidden');
+                } else {
+                    slide.classList.add('hidden');
+                }
+            }
+
+            // Actualizar indicación en cabecera
+            document.getElementById('current-slide-num').innerText = currentSlide;
+            
+            // Actualizar barra de progreso
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+
+            // Botones de navegación
+            document.getElementById('prev-btn').disabled = currentSlide === 1;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides;
+
+            // Actualizar estado de los puntos navegadores
+            const dots = document.querySelectorAll('.dot-btn');
+            dots.forEach((dot, index) => {
+                if (index + 1 === currentSlide) {
+                    dot.className = "dot-btn w-6 h-3 rounded-full bg-indigo-500 transition-all duration-300";
+                } else {
+                    dot.className = "dot-btn w-3 h-3 rounded-full bg-slate-700 hover:bg-slate-600 transition-all duration-300";
+                }
+            });
+
+            // Desplazar suavemente hacia arriba al cambiar de lámina
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeSlide(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 1 && newSlide <= totalSlides) {
+                currentSlide = newSlide;
+                updateSlideView();
+            }
+        }
+
+        function goToSlide(slideNum) {
+            if (slideNum >= 1 && slideNum <= totalSlides) {
+                currentSlide = slideNum;
+                updateSlideView();
+            }
+        }
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('expanded');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Permitir navegación con teclado (Flechas izquierda / derecha)
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                changeSlide(1);
+            } else if (event.key === 'ArrowLeft') {
+                changeSlide(-1);
+            }
+        });
+
+        // Inicializar vista al cargar la página
+        window.onload = function() {
+            updateSlideView();
+        };
+    </script>
+</body>
+</html>
